@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>내 직업에 맞는 미국 연금 찾기 | Grace of Wealth</title>
+<meta name="description" content="간호사, 선생님, 사장님, 1099 자영업자까지. 직업별로 맞는 미국 은퇴계좌와 2026년 납입 한도를 한눈에.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+body{margin:0;background:#F5F0EA}
+a{color:#0E5A4C}a:hover{color:#0A4439}
+#groups button:focus-visible{outline:3px solid #2A4C7E;outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div style="font-family: 'Pretendard', -apple-system, system-ui, sans-serif; color: #1F2B27; background: #F5F0EA; word-break: keep-all; min-height: 100vh">
+
+  <!-- HERO -->
+  <header style="max-width: 1120px; margin: 0 auto; padding: 72px 24px 48px; display: flex; flex-direction: column; gap: 20px">
+    <div style="font-size: 17px; font-weight: 700; color: #0E5A4C">Grace of Wealth · @graceofwealth</div>
+    <div style="align-self: flex-start; background: #0E5A4C; color: #DDF247; font-size: 17px; font-weight: 700; padding: 9px 16px">옷만 보고 골라 본 미국 연금</div>
+    <h1 style="margin: 0; font-size: clamp(38px, 6vw, 72px); font-weight: 900; line-height: 1.15; letter-spacing: -0.04em">내 직업에 맞는<br>미국 연금 찾기</h1>
+    <p style="margin: 0; max-width: 640px; font-size: 20px; line-height: 1.65; color: #4A5551; font-weight: 500">미국 연금은 직업별로, 소득별로, 세제 혜택별로 사람마다 다르게 적용돼요. 16개 직업 중 내 직업을 눌러 보세요.</p>
+  </header>
+
+  <!-- JOB PICKER -->
+  <section style="max-width: 1120px; margin: 0 auto; padding: 0 24px 72px">
+    <div id="groups" style="display: flex; flex-direction: column; gap: 28px"></div>
+
+    <div id="result" style="margin-top: 28px; background: #FFFFFF; display: flex; flex-wrap: wrap">
+      <div style="flex: 1 1 320px; background: #0E5A4C; color: #FFFFFF; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px">
+        <div style="font-size: 16px; font-weight: 700; color: #DDF247"><span data-f="name"></span> · 대표적인 선택</div>
+        <div style="font-size: clamp(34px, 4.4vw, 52px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1"><span data-f="account"></span></div>
+        <div style="font-size: 18px; line-height: 1.6; font-weight: 500"><span data-f="oneLine"></span></div>
+        <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 18px">
+          <div style="font-size: 14px; font-weight: 700; color: #DDF247">2026년 납입 한도</div>
+          <div style="font-size: 22px; font-weight: 800"><span data-f="limit"></span></div>
+          <div style="font-size: 15px; line-height: 1.55"><span data-f="catchup"></span></div>
+        </div>
+        <div style="align-self: flex-start; margin-top: 6px; background: #DDF247; color: #0E5A4C; font-size: 15px; font-weight: 800; padding: 7px 12px"><span data-f="taxType"></span></div>
+      </div>
+      <div style="flex: 999 1 420px; min-width: 0; padding: 40px 36px; display: flex; flex-direction: column; gap: 22px">
+        <div style="font-size: 15px; font-weight: 700; color: #2A4C7E">이런 분들이 많이 써요</div>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div id="points" style="display: flex; flex-direction: column; gap: 14px"></div>
+        </div>
+        <div style="background: #F5F0EA; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 15px; font-weight: 800; color: #0E5A4C">상황에 따라 달라져요</div>
+          <div style="font-size: 16px; line-height: 1.65; color: #3B4642"><span data-f="depends"></span></div>
+        </div>
+        <a id="resultCta" href="https://docurise.io/graceofwealth-plan/d/document-pcxulkg5" target="_blank" rel="noopener" style="border: 2px solid #2A4C7E; color: #1F2B27; text-decoration: none; padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+          <span style="display: flex; flex-direction: column; gap: 4px">
+            <span id="ctaKicker" style="font-size: 14px; font-weight: 700; color: #2A4C7E"></span>
+            <span id="ctaTitle" style="font-size: 18px; font-weight: 800; line-height: 1.4"></span>
+          </span>
+          <span style="background: #2A4C7E; color: #FFFFFF; font-size: 15px; font-weight: 800; padding: 10px 16px; display: inline-flex; align-items: center; gap: 8px">웨비나 신청 <svg width="20" height="14" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h22M18 2l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRE-TAX vs ROTH -->
+  <section style="background: #FFFFFF">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 16px; font-weight: 700; color: #2A4C7E">세제 혜택은 크게 두 가지</div>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.25">세금을 지금 아낄까, 나중에 아낄까</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+        <div style="border: 2px solid #2A4C7E; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+          <div style="font-size: 24px; font-weight: 900; color: #2A4C7E">세전 (Traditional)</div>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+            <div style="background: #2A4C7E; color: #FFFFFF; font-size: 16px; font-weight: 700; padding: 10px 14px">넣을 때: 세금 공제</div>
+            <svg width="28" height="16" viewBox="0 0 28 16" fill="none" stroke="#2A4C7E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h22M18 2l6 6-6 6"/></svg>
+            <div style="background: #E8E2D8; font-size: 16px; font-weight: 700; padding: 10px 14px">꺼낼 때: 소득세</div>
+          </div>
+          <div style="font-size: 17px; line-height: 1.6; color: #3B4642">401(k), 403(b), 457(b), 전통 IRA, SEP IRA, SIMPLE IRA</div>
+        </div>
+        <div style="border: 2px solid #0E5A4C; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+          <div style="font-size: 24px; font-weight: 900; color: #0E5A4C">세후 (Roth)</div>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+            <div style="background: #E8E2D8; font-size: 16px; font-weight: 700; padding: 10px 14px">넣을 때: 세금 냄</div>
+            <svg width="28" height="16" viewBox="0 0 28 16" fill="none" stroke="#0E5A4C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h22M18 2l6 6-6 6"/></svg>
+            <div style="background: #0E5A4C; color: #DDF247; font-size: 16px; font-weight: 700; padding: 10px 14px">꺼낼 때: 세금 0원</div>
+          </div>
+          <div style="font-size: 17px; line-height: 1.6; color: #3B4642">Roth IRA, Roth 401(k) · 59½세 이후, 계좌 5년 이상 조건</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="background: #DDF247; color: #0E5A4C">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 36px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 420px">
+        <div style="font-size: 15px; font-weight: 700; opacity: 0.85">11.29(일) 9PM EST · 직장인 부모 웨비나</div>
+        <div style="font-size: clamp(21px, 2.4vw, 27px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.35">세전으로 넣을까, Roth로 넣을까? 우리 집에 맞는 답을 같이 정리해요</div>
+      </div>
+      <a href="https://docurise.io/graceofwealth-plan/d/document-pcxulkg5" target="_blank" rel="noopener" style="background: #0E5A4C; color: #DDF247; font-size: 18px; font-weight: 900; padding: 16px 26px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px">무료 신청하기 <svg width="20" height="14" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h22M18 2l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- LIMITS TABLE -->
+  <section style="max-width: 1120px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 16px; font-weight: 700; color: #2A4C7E">2026년 IRS 기준</div>
+      <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); font-weight: 900; letter-spacing: -0.03em">계좌별 납입 한도 한눈에 보기</h2>
+    </div>
+    <div style="overflow-x: auto; background: #FFFFFF">
+      <table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 17px">
+        <thead>
+          <tr style="background: #0E5A4C; color: #FFFFFF; text-align: left">
+            <th style="padding: 16px 20px; font-weight: 800">계좌</th>
+            <th style="padding: 16px 20px; font-weight: 800">누가</th>
+            <th style="padding: 16px 20px; font-weight: 800">기본 한도</th>
+            <th style="padding: 16px 20px; font-weight: 800">50세 이상 추가</th>
+          </tr>
+        </thead>
+        <tbody id="limits">
+          
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size: 15px; line-height: 1.6; color: #5C6662">60~63세는 401(k)·403(b)·457(b)에 $8,000 대신 $11,250, SIMPLE IRA에 $4,000 대신 $5,250까지 추가 납입할 수 있어요.</div>
+  </section>
+
+
+  <section style="background: #2A4C7E; color: #FFFFFF">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 36px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 420px">
+        <div style="font-size: 15px; font-weight: 700; opacity: 0.85">12.6(일) 9PM EST · 비즈니스 오너 웨비나 · with LedgerPoint CPA</div>
+        <div style="font-size: clamp(21px, 2.4vw, 27px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.35">사장님이라면, 올해 세금 줄일 시간이 아직 남아 있어요</div>
+      </div>
+      <a href="https://docurise.io/graceofwealth-plan/d/document-pcxulkg5" target="_blank" rel="noopener" style="background: #DDF247; color: #0E5A4C; font-size: 18px; font-weight: 900; padding: 16px 26px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px">무료 신청하기 <svg width="20" height="14" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h22M18 2l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- WEBINARS -->
+  <section style="background: #1F2B27; color: #FFFFFF">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 16px; font-weight: 700; color: #DDF247">2026년 마지막 한 달 · 은퇴플랜과 현금흐름 점검</div>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.25">올해가 가기 전, 같이 공부해요</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+        <div style="display: flex; flex-wrap: wrap; background: #FFFFFF; color: #1F2B27">
+          <div style="flex: 1 1 150px; background: #2A4C7E; color: #FFFFFF; padding: 28px 24px; display: flex; flex-direction: column; gap: 6px">
+            <div style="font-size: 44px; font-weight: 900; letter-spacing: -0.04em">11.29</div>
+            <div style="font-size: 16px; font-weight: 700">일요일</div>
+            <div style="font-size: 16px; font-weight: 700; color: #DDF247">9:00 PM EST</div>
+          </div>
+          <div style="flex: 999 1 240px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px">
+            <div style="align-self: flex-start; background: #E8E2D8; font-size: 14px; font-weight: 700; padding: 5px 10px">직장인 부모</div>
+            <div style="font-size: 21px; font-weight: 800; line-height: 1.4">올해가 가기 전 꼭 챙겨야 할 미국 은퇴플랜</div>
+            <div style="font-size: 15px; color: #5C6662">401(k) · 403(b) · 457(b) · IRA 101 · 진행 그레이스</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; background: #FFFFFF; color: #1F2B27">
+          <div style="flex: 1 1 150px; background: #0E5A4C; color: #FFFFFF; padding: 28px 24px; display: flex; flex-direction: column; gap: 6px">
+            <div style="font-size: 44px; font-weight: 900; letter-spacing: -0.04em">12.6</div>
+            <div style="font-size: 16px; font-weight: 700">일요일</div>
+            <div style="font-size: 16px; font-weight: 700; color: #DDF247">9:00 PM EST</div>
+          </div>
+          <div style="flex: 999 1 240px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px">
+            <div style="align-self: flex-start; background: #E8E2D8; font-size: 14px; font-weight: 700; padding: 5px 10px">미국 비즈니스 오너</div>
+            <div style="font-size: 21px; font-weight: 800; line-height: 1.4">대표님의 연말 절세, 숨은 현금 찾기</div>
+            <div style="font-size: 15px; color: #5C6662">진행 Jubyung Ha, CPA (LedgerPoint)</div>
+          </div>
+        </div>
+      </div>
+      <a href="https://docurise.io/graceofwealth-plan/d/document-pcxulkg5" target="_blank" rel="noopener" style="align-self: flex-start; background: #DDF247; color: #0E5A4C; font-size: 20px; font-weight: 900; padding: 18px 32px; text-decoration: none; display: inline-flex; align-items: center; gap: 12px">웨비나 무료 신청하기
+        <svg width="22" height="16" viewBox="0 0 28 16" fill="none" stroke="#0E5A4C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h22M18 2l6 6-6 6"/></svg>
+      </a>
+      <div style="font-size: 15px; color: #C9D1CD">두 웨비나 중 하나만, 또는 둘 다 신청할 수 있어요. Zoom 링크는 웨비나 당일에 보내 드려요.</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="max-width: 1120px; margin: 0 auto; padding: 48px 24px 64px; display: flex; flex-direction: column; gap: 12px">
+    <div style="font-size: 17px; font-weight: 800; color: #0E5A4C">Grace of Wealth · 미국 머니쌤 그레이스</div>
+    <div style="font-size: 14px; line-height: 1.7; color: #5C6662">이 페이지는 일반적인 교육 정보이며 세무·법률·투자 자문이 아닙니다. 직업별 계좌는 대표적인 선택지일 뿐이고, 소득과 가족 상황, 고용 형태에 따라 맞는 계좌와 세제 혜택이 달라집니다. 납입 한도는 2026년 IRS 기준입니다. 가입 전에 세무 전문가 또는 재정 전문가와 꼭 상담하세요.</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+    var D = function (group, name, account, oneLine, limit, catchup, taxType, points, depends) {
+      return { group: group, name: name, account: account, oneLine: oneLine, limit: limit, catchup: catchup, taxType: taxType, points: points, depends: depends };
+    };
+    var K401 = '50세 이상 +$8,000 · 60~63세 +$11,250';
+    var KIRA = '50세 이상 +$1,100';
+    var data = [
+      D(0, '간호사', '403(b)', '비영리 병원과 학교 직원을 위한 401(k)라고 생각하면 쉬워요.', '$24,500', K401, '세전 · 플랜에 따라 Roth도 가능',
+        ['비영리 병원, 학교, 교회 등에서 일하는 분', '월급에서 자동으로 빠져나가 꾸준히 쌓기 좋아요', '병원 매칭이 있다면 매칭 받는 만큼은 꼭 채우세요'],
+        '공립(정부 소속) 병원이라면 457(b)도 함께 쓸 수 있는 경우가 있어요. 영리 병원 소속이면 401(k)가 됩니다.'),
+      D(0, '테크 회사 아빠', '401(k)', '회사가 월급에서 떼어 넣어 주고, 매칭까지 얹어 주는 직장인 대표 연금이에요.', '$24,500', K401, '세전 · Roth 401(k) 선택 가능',
+        ['회사 401(k)가 있는 직장인', '회사 매칭은 공짜 돈이에요. 매칭 한도까지는 꼭 채우세요', '회사 몫까지 합치면 1년에 최대 $72,000까지 들어갈 수 있어요'],
+        '모으는 것만큼 중요한 게 은퇴 후 어떻게 꺼내 쓸지예요. 이직하거나 퇴사하면 IRA로 옮겨(롤오버) 계속 관리할 수 있어요.'),
+      D(0, '공립학교 선생님', '457(b)', '공립학교와 지방정부 직원이 쓰는 은퇴 계좌예요. 퇴직 후 꺼낼 때 나이 제한 벌금이 없는 게 특징이에요.', '$24,500', K401, '세전 · 플랜에 따라 Roth도 가능',
+        ['공립학교 교사, 교직원, 지방정부 직원', '학교에 403(b)도 있다면 두 계좌를 각각 한도까지 채울 수 있어요', '퇴직 후에는 59½세 전에 꺼내도 10% 벌금이 없어요'],
+        '주(state) 교원연금(pension)이 있다면 그 위에 얹는 계좌예요. 사립학교 선생님은 보통 403(b)를 써요.'),
+      D(0, '연방 공무원', 'TSP', '연방 공무원과 군인을 위한 401(k)예요. 수수료가 낮은 것으로 유명해요.', '$24,500', K401, '세전 · Roth TSP 선택 가능',
+        ['연방 정부 기관 직원, 군인', '기관이 자동으로 1%를 넣어 주고, 내가 넣으면 매칭까지 해 줘요', '기관 몫까지 합치면 월급의 최대 5%를 더 받을 수 있어요'],
+        'FERS 연금, 소셜시큐리티와 함께 은퇴 소득을 만드는 세 번째 기둥이에요. 매칭 받는 만큼은 꼭 넣으세요.'),
+      D(0, '목사님', '403(b)(9)', '교회와 교단이 목회자와 교회 직원을 위해 만드는 은퇴 플랜이에요.', '$24,500', K401, '세전 · 플랜에 따라 Roth도 가능',
+        ['교회나 교단에 은퇴 플랜이 있는 목회자, 교회 직원', '사례비에서 떼어 넣어 노후를 준비해요', '교단 플랜이라 교회를 옮겨도 이어 갈 수 있는 경우가 많아요'],
+        '교회에 플랜이 없다면 전통 IRA나 Roth IRA로 시작하세요. 목회자는 주택수당 등 세금 처리가 특수해서 전문가 확인이 꼭 필요해요.'),
+
+      D(1, '태권도 사범님', 'SEP IRA', '1099로 일하는 자영업자가 가장 쉽게 열 수 있는 은퇴 계좌예요.', '순수입의 약 20%, 최대 $72,000', '추가 납입(캐치업)은 없어요', '세전 · 넣은 만큼 세금 공제',
+        ['1099로 일하는 사범님, 강사, 프리랜서', '많이 번 해에는 많이 넣고, 적게 번 해에는 쉬어도 돼요', '세금 신고 마감(연장 포함) 전까지 개설하고 넣을 수 있어요'],
+        '직원이 없고 혼자라면 Solo 401(k)로 같은 소득에서 더 많이 넣을 수 있어요. 도장에 W-2 직원으로 고용된 사범님이라면 도장 플랜이나 IRA를 봐야 해요.'),
+      D(1, '트럭 기사', 'Solo 401(k)', '직원 없이 혼자 일하는 사장님이 직원 몫과 사장 몫을 둘 다 넣을 수 있는 계좌예요.', '$24,500 + 사업자 몫, 합계 최대 $72,000', K401, '세전 · Roth로도 가능',
+        ['자기 트럭으로 일하는 오너 오퍼레이터', '같은 소득이라도 SEP IRA보다 더 많이 넣을 수 있어요', '소득이 많은 해에 크게 넣으면 그만큼 소득세가 줄어요'],
+        '회사 소속(W-2) 기사라면 회사 401(k)를 먼저 확인하세요. 배우자가 같이 일하고 급여를 받으면 배우자도 함께 가입할 수 있어요.'),
+      D(1, '우버 기사', 'Roth IRA', '지금 세금을 내고 넣는 대신, 은퇴 후 꺼낼 때 세금이 0원인 계좌예요.', '$7,500', KIRA, '세후 · 나중에 꺼낼 때 세금 0원',
+        ['1099로 일하는 운전기사, 배달 기사', '지금 소득과 세율이 높지 않을 때 넣어 두면 특히 유리해요', '59½세 이후, 계좌를 연 지 5년이 지나면 수익까지 세금 없이 인출'],
+        '순수입이 커지면 SEP IRA나 Solo 401(k)로 더 많이 넣고 지금 세금을 줄이는 쪽이 나을 수 있어요.'),
+      D(1, '부동산 에이전트', 'SEP IRA', '커미션처럼 소득이 들쭉날쭉한 1099 자영업자에게 잘 맞는 계좌예요.', '순수입의 약 20%, 최대 $72,000', '추가 납입(캐치업)은 없어요', '세전 · 넣은 만큼 세금 공제',
+        ['브로커리지 소속 1099 에이전트', '거래가 많았던 해에는 크게 넣고, 적은 해에는 쉬어 갈 수 있어요', '세금 신고 마감(연장 포함) 전까지 지난해분을 넣을 수 있어요'],
+        '혼자 일하고 더 많이 넣고 싶다면 Solo 401(k)도 비교해 보세요. 어시스턴트를 직원으로 두면 그 직원에게도 같은 비율로 넣어 줘야 해요.'),
+      D(1, '치과 페이닥터', 'Solo 401(k)', '1099로 일하는 전문직이 늦게 시작한 은퇴 준비를 빠르게 따라잡는 계좌예요.', '$24,500 + 사업자 몫, 합계 최대 $72,000', K401, '세전 · Roth로도 가능',
+        ['여러 클리닉에서 1099로 일하는 치과의사, 의사', '학자금 갚느라 늦게 시작한 은퇴 준비를 크게 따라잡을 수 있어요', '소득이 높은 만큼 넣는 금액에 따른 절세 효과도 커요'],
+        'W-2로 고용된 페이닥터라면 병원 401(k)를 먼저 보세요. 직원을 둔 개원의는 Solo 401(k)를 쓸 수 없어요.'),
+
+      D(2, '미용실 원장님', '전통 IRA', '근로소득만 있으면 누구나 열 수 있는 가장 기본 은퇴 계좌예요.', '$7,500', KIRA, '세전 · 넣은 만큼 세금 공제',
+        ['회사에서 넣어 주는 연금이 없는 분', '은행이나 증권사에서 혼자서도 바로 열 수 있어요', '세금 신고 마감 전까지 지난해분도 넣을 수 있어요'],
+        '직원이 있는 미용실이라면 SIMPLE IRA, 혼자 운영한다면 SEP IRA나 Solo 401(k)로 훨씬 많이 넣을 수 있어요. 본인이나 배우자가 회사 플랜에 가입되어 있으면 소득에 따라 공제가 줄어들 수 있어요.'),
+      D(2, '네일샵 사장님', 'SIMPLE IRA', '직원이 있는 작은 가게가 사장님과 직원의 노후를 같이 챙기는 계좌예요.', '$17,000', '50세 이상 +$4,000 · 60~63세 +$5,250', '세전 · 넣은 만큼 세금 공제',
+        ['직원 100명 이하의 작은 가게', '직원은 자기 월급에서 넣고, 사장님은 최대 3%까지 매칭해 줘요', '사장님 본인도 직원처럼 넣고 매칭까지 받을 수 있어요'],
+        '처음 만들 때는 그 해 10월 1일 전에 개설해야 그 해부터 적용돼요. 직원이 모두 1099라면 SEP IRA나 Solo 401(k)를 비교해 보세요.'),
+      D(2, '부부가 하는 카페', '부부 Solo 401(k)', '직원 없이 부부만 일하는 가게라면 두 사람이 각각 직원 몫과 사장 몫을 넣을 수 있어요.', '1인당 $24,500 + 사업자 몫, 각자 최대 $72,000', K401, '세전 · Roth로도 가능',
+        ['직원 없이 부부만 일하는 카페, 가게', '배우자도 실제로 일하고 급여를 받아야 해요', '두 사람 몫을 합치면 SEP IRA보다 훨씬 많이 넣을 수 있어요'],
+        '아르바이트 직원이 일정 시간 이상 일하게 되면 그 직원도 포함해야 해서, 일반 401(k)나 SIMPLE IRA로 바꿔야 할 수 있어요.'),
+      D(2, '식당 사장님', '회사 401(k)', '직원이 많은 사업장이라면 회사 401(k)로 직원 복지와 사장님 노후를 함께 챙길 수 있어요.', '1인당 $24,500 · 회사 몫 합쳐 최대 $72,000', K401, '세전 · Roth 401(k) 선택 가능',
+        ['직원이 여럿인 식당, 마트, 사업장', '은퇴 플랜이 있으면 직원을 뽑고 오래 붙잡기 좋아요', '처음 플랜을 만드는 작은 사업장은 세금 크레딧을 받을 수 있어요'],
+        '직원 수와 예산에 따라 SIMPLE IRA가 더 간단하고 저렴할 수 있어요. 설계와 비용은 플랜 업체, CPA와 함께 비교하세요.'),
+      D(2, '개원 치과의사', 'Cash Balance Plan', '고소득 사장님이 401(k)와 함께 쓰면서 1년에 훨씬 큰 금액을 넣을 수 있는 연금 플랜이에요.', '나이와 소득에 따라 보험계리사가 계산', '나이가 많을수록 넣을 수 있는 금액이 커져요', '세전 · 넣은 만큼 세금 공제',
+        ['소득이 높은 개원의, 전문직 사업체 대표', '50대에 은퇴 준비를 크게 따라잡고 싶은 분', '401(k)와 함께 운영해서 절세 폭을 넓혀요'],
+        '직원에게도 일정 혜택을 줘야 하고, 매년 정해진 금액을 넣어야 하는 부담이 있어요. 소득이 안정적일 때 맞는 플랜이에요.'),
+      D(2, '세탁소 사장님', '연금보험 (Annuity)', '가게를 정리하고 생긴 목돈을 평생 월급처럼 받을 수 있게 바꿔 주는 보험사 상품이에요.', 'IRS 납입 한도 없음', '목돈을 한 번에 넣을 수 있어요', '세금 이연 · 평생 소득 옵션',
+        ['은퇴를 앞두고 가게를 판 사장님', '정해진 기간 이자가 확정되는 MYGA, 원금을 지키며 지수에 따라 불어나는 FIA 등이 있어요', '평생 소득 옵션을 붙이면 오래 살아도 소득이 끊기지 않아요'],
+        '중도에 해지하면 해약 수수료가 있는 기간이 있어요. 상품마다 조건이 달라서 여러 회사를 비교하고 고르는 게 중요해요.'),
+
+      D(3, '전업주부', 'Roth IRA', '소득이 없어도, 부부 합산으로 세금을 신고하면 배우자 소득으로 내 이름의 연금을 만들 수 있어요.', '$7,500', KIRA, '세후 · 나중에 꺼낼 때 세금 0원',
+        ['부부 합산(MFJ)으로 세금 신고하는 전업주부', '지금 세금을 내고 넣는 대신, 은퇴 후 꺼낼 때 세금이 없어요', '59½세 이후, 계좌를 연 지 5년이 지나면 수익까지 세금 없이 인출'],
+        '부부 소득이 일정 수준을 넘으면 Roth IRA 납입이 줄거나 막혀요. 그 경우에는 전통 IRA로 넣는 방법도 있어요.')
+    ];
+
+    var groupMeta = [
+      { title: '회사·기관에서 일해요', desc: 'W-2 직장인, 공무원' },
+      { title: '1099로 혼자 일해요', desc: '프리랜서, 계약직, 자영업' },
+      { title: '가게·사업체를 운영해요', desc: '직원 유무에 따라 달라져요' },
+      { title: '가정을 지켜요', desc: '소득이 없어도 가능해요' }
+    ];
+
+    var limits = [
+      { a: '401(k) · 403(b) · 457(b)', b: '회사·병원·학교 직원', c: '$24,500', d: '+$8,000' },
+      { a: 'Solo 401(k)', b: '직원 없는 사업자 (배우자 가능)', c: '$24,500 + 사업자 몫, 합계 최대 $72,000', d: '+$8,000' },
+      { a: 'SEP IRA', b: '자영업자·소규모 사업자', c: '소득의 25%(자영업자 약 20%), 최대 $72,000', d: '없음' },
+      { a: 'SIMPLE IRA', b: '직원 있는 작은 사업장', c: '$17,000', d: '+$4,000' },
+      { a: '전통 IRA', b: '근로소득이 있는 누구나', c: '$7,500', d: '+$1,100' },
+      { a: 'Roth IRA', b: '소득 기준 이하인 누구나', c: '$7,500 (전통 IRA와 합산)', d: '+$1,100' }
+    ];
+
+  var picked = 0;
+  function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  var check = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E5A4C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  function renderGroups(){
+    var h='';
+    groupMeta.forEach(function(g,gi){
+      h+='<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="font-size:20px;font-weight:900;letter-spacing:-0.02em">'+esc(g.title)+'</div><div style="font-size:15px;color:#5C6662;font-weight:500">'+esc(g.desc)+'</div></div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:10px">';
+      data.forEach(function(j,i){
+        if(j.group!==gi) return;
+        var on=i===picked;
+        h+='<button type="button" data-i="'+i+'" aria-pressed="'+on+'" style="font-family:inherit;cursor:pointer;text-align:left;border:2px solid '+(on?'#0E5A4C':'#E8E2D8')+';background:'+(on?'#0E5A4C':'#FFFFFF')+';color:'+(on?'#FFFFFF':'#1F2B27')+';padding:16px 18px;min-height:96px;display:flex;flex-direction:column;gap:6px;justify-content:flex-end"><span style="font-size:19px;font-weight:800;letter-spacing:-0.02em;line-height:1.3">'+esc(j.name)+'</span><span style="font-size:15px;font-weight:700">'+esc(j.account)+'</span></button>';
+      });
+      h+='</div></div>';
+    });
+    document.getElementById('groups').innerHTML=h;
+  }
+  function renderResult(){
+    var c=data[picked];
+    var biz = c.group===1 || c.group===2;
+    document.getElementById('ctaKicker').textContent = biz ? '12.6(일) 9PM EST · 비즈니스 오너 웨비나' : '11.29(일) 9PM EST · 직장인 부모 웨비나';
+    document.getElementById('ctaTitle').textContent = biz ? '대표님의 연말 절세, 숨은 현금 찾기' : '올해가 가기 전 꼭 챙겨야 할 미국 은퇴플랜';
+    document.querySelectorAll('[data-f]').forEach(function(el){el.textContent=c[el.getAttribute('data-f')];});
+    document.getElementById('points').innerHTML=c.points.map(function(p){return '<div style="display:flex;gap:14px;align-items:flex-start">'+check+'<div style="font-size:18px;line-height:1.6;font-weight:500">'+esc(p)+'</div></div>';}).join('');
+  }
+  document.getElementById('limits').innerHTML=limits.map(function(r){return '<tr style="border-bottom:1px solid #E8E2D8"><td style="padding:16px 20px;font-weight:800">'+esc(r.a)+'</td><td style="padding:16px 20px;color:#3B4642">'+esc(r.b)+'</td><td style="padding:16px 20px;font-weight:700">'+esc(r.c)+'</td><td style="padding:16px 20px;color:#3B4642">'+esc(r.d)+'</td></tr>';}).join('');
+  document.getElementById('groups').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-i]'); if(!b) return;
+    picked=+b.getAttribute('data-i'); renderGroups(); renderResult();
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  renderGroups(); renderResult();
+})();
+</script>
+</body>
+</html>
